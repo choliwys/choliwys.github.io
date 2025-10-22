@@ -1,0 +1,788 @@
+/* ============================================= */
+/* === 1. CSS RESET (Normalización) =========== */
+/* ============================================= */
+
+/* * Usamos un reseteo simple pero efectivo.
+ * box-sizing: border-box; es fundamental.
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * ESTA ES LA LÍNEA QUE FALTA:
+ * Le decimos al navegador que anime el scroll 
+ * cuando naveguemos a un ancla (ej: #sobre-mi).
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================= */
+/* === 2. VARIABLES CSS (Custom Properties) ==== */
+/* ============================================= */
+
+:root {
+  /* Paleta de Colores (Dark Mode) */
+  --bg-dark-primary: #0F172A;   /* Fondo principal (casi negro, azulado) */
+  --bg-dark-secondary: #1E293B; /* Fondo para tarjetas, navbar (gris azulado) */
+  --text-light-primary: #F8FAFC;   /* Texto principal (casi blanco) */
+  --text-light-secondary: #94A3B8; /* Texto secundario (gris claro) */
+  --accent-primary: #3B82F6;       /* Acento (azul vibrante) */
+  --accent-hover: #2563EB;       /* Acento (hover) */
+
+  /* Tipografía */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  
+  /* Otros */
+  --border-radius-base: 8px;
+}
+
+/* ============================================= */
+/* === 3. ESTILOS BASE DEL BODY =============== */
+/* ============================================= */
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark-primary);
+  color: var(--text-light-primary);
+  line-height: 1.6; /* Mejora la legibilidad */
+  
+  /* Mejoran el renderizado de fuentes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos base para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-light-primary);
+  line-height: 1.2;
+}
+
+
+
+
+/* ============================================= */
+/* === 4. CLASES UTILITARIAS (Helpers) ======== */
+/* ============================================= */
+/* * Esta clase 'container' será esencial. 
+ * La usaremos en todas las secciones para centrar 
+ * el contenido en la página.
+*/
+.container {
+  max-width: 1120px; /* Ancho máximo estándar para desktops */
+  margin-left: 1.5rem;  /* Margen en móviles */
+  margin-right: 1.5rem; /* Margen en móviles */
+}
+
+/* * Estilo base para los botones (reutilizable)
+*/
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-base);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: var(--accent-primary);
+  color: var(--text-light-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-hover);
+}
+
+
+/* ============================================= */
+/* === 5. HEADER / NAVBAR ====================== */
+/* ============================================= */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Asegura que esté por encima de otro contenido */
+  background-color: var(--bg-dark-secondary);
+  border-bottom: 1px solid var(--bg-dark-primary); /* Sutil línea divisoria */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo a la izq, resto a la der */
+  align-items: center;
+  height: 4.5rem; /* 72px (altura estándar) */
+}
+
+.navbar__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: var(--text-light-primary);
+  text-decoration: none;
+}
+
+.navbar__logo:hover {
+  color: var(--accent-primary);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espacio entre el botón CV y el toggle (en desktop) */
+}
+
+/* --- Estilos Mobile-First --- */
+
+/* * El menú de navegación estará oculto en móviles.
+ * Más adelante usaremos JS para mostrarlo al hacer clic 
+ * en el botón de hamburguesa.
+*/
+.navbar__menu {
+  /* Oculto por ahora */
+  display: none; 
+}
+
+/* El botón de hamburguesa SÍ es visible en móviles */
+.navbar__toggle {
+  font-size: 1.25rem;
+  color: var(--text-light-primary);
+  cursor: pointer;
+  /* (Temporalmente visible) */
+  display: block; 
+}
+
+/* El botón de CV estará oculto en móviles */
+.navbar__btn-cv {
+  display: none;
+}
+
+
+/* --- Estilos Desktop (Media Query) --- */
+
+/* * A partir de 768px (tablets y desktops), 
+ * cambiamos la distribución de la navbar.
+*/
+@media screen and (min-width: 768px) {
+  
+  /* * Hacemos que la clase 'container' tenga márgenes 
+   * automáticos para centrarse en lugar de los 1.5rem
+  */
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Ocultamos el botón de hamburguesa */
+  .navbar__toggle {
+    display: none;
+  }
+
+  /* Mostramos el menú de navegación */
+  .navbar__menu {
+    display: block; /* Hacemos visible el contenedor del menú */
+  }
+
+  .navbar__list {
+    display: flex; /* Alineamos los <li> horizontalmente */
+    list-style: none;
+    gap: 2.5rem; /* Espacio entre enlaces */
+  }
+
+  .navbar__link {
+    color: var(--text-light-secondary);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .navbar__link:hover {
+    color: var(--accent-primary);
+  }
+
+  /* Mostramos el botón de CV */
+  .navbar__btn-cv {
+    display: inline-block; /* (ya es 'inline-block' por la clase .btn) */
+  }
+}
+
+
+
+
+
+/* ============================================= */
+/* === 6. CLASES UTILITARIAS (Continuación) ==== */
+/* ============================================= */
+
+/* * Clase base para todas las secciones. 
+ * Definimos el padding inferior aquí.
+*/
+.section {
+  padding-bottom: 5rem;
+}
+
+/* * A TODAS las secciones, EXCEPTO al Hero, les daremos
+ * un padding superior para compensar la navbar.
+*/
+.section:not(.hero) {
+  padding-top: 7rem;  /* 4.5rem (navbar) + 2.5rem (espacio) */
+}
+
+
+/* ... (Aquí dejas los estilos de .btn--outline y .btn--secondary 
+      que ya tenías, esos no cambian) ... */
+.btn--outline {
+  background-color: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+}
+.btn--outline:hover {
+  background-color: var(--accent-primary);
+  color: var(--text-light-primary);
+}
+.btn--secondary {
+  background-color: var(--bg-dark-secondary);
+  color: var(--text-light-primary);
+  border: 2px solid var(--bg-dark-secondary);
+}
+.btn--secondary:hover {
+  background-color: #334155;
+  border-color: #334155;
+}
+
+/* ============================================= */
+/* === 7. SECCIÓN HERO (INICIO) ================ */
+/* ============================================= */
+
+.hero {
+  /* Hacemos que la sección ocupe toda la pantalla */
+  min-height: 100vh; 
+  
+  /* Centramos el contenido verticalmente */
+  display: flex;
+  align-items: center;
+  
+  /* * Esta es la corrección clave:
+   * Añadimos un padding-top igual a la altura de la navbar.
+   * Esto empuja el contenido centrado para que NUNCA 
+   * quede debajo de la navbar.
+  */
+  padding-top: 4.5rem; 
+}
+
+.hero__container {
+  /* Ya no necesitamos el padding-top aquí */
+}
+
+.hero__content {
+  max-width: 600px; 
+}
+
+.hero__greeting {
+  display: block;
+  font-size: 1.125rem; /* 18px */
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-bottom: 1rem; /* Ajuste: Aumentado (antes 0.5rem) */
+}
+
+.hero__title {
+  font-size: 3rem; /* Ajuste: Reducido (antes 3.5rem) */
+  font-weight: 700;
+  margin-bottom: 1.25rem; /* Ajuste: Aumentado (antes 0.75rem) */
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 600;
+  color: var(--text-light-secondary);
+  margin-bottom: 1.25rem; /* Ajuste: (antes 1rem) */
+}
+
+.hero__description {
+  font-size: 1.125rem; /* 18px */
+  color: var(--text-light-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 500px; 
+}
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+/* --- Estilos Hero (Media Query para pantallas más grandes) --- */
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 4rem; /* Ajuste: Reducido (antes 4.5rem) */
+  }
+
+  .hero__subtitle {
+    font-size: 2rem; /* 32px */
+  }
+}
+
+
+
+
+
+/* ============================================= */
+/* === 7.1. CLASE UTILITARIA (Títulos) ========= */
+/* ============================================= */
+/* * Esta clase la reutilizaremos en todas las secciones
+ * para los títulos principales (Sobre Mí, Proyectos, etc.)
+*/
+.section__title {
+  font-size: 2.25rem; /* 36px */
+  font-family: var(--font-heading);
+  color: var(--text-light-primary);
+  margin-bottom: 2rem;
+  text-align: center; /* Títulos centrados por defecto */
+}
+
+
+/* ============================================= */
+/* === 8. SECCIÓN SOBRE MÍ ===================== */
+/* ============================================= */
+
+/* Mobile-First: .about__container es 1 columna por defecto */
+.about__container {
+  display: grid;
+  gap: 2.5rem; /* Espacio entre imagen y contenido en móvil */
+}
+
+.about__image-wrapper {
+  justify-self: center; /* Centramos la foto en móvil */
+  max-width: 300px; /* Tamaño máximo de la foto en móvil */
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-base);
+  border: 3px solid var(--bg-dark-secondary); /* Borde sutil */
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15); /* Sombra con el color de acento */
+}
+
+/* * Hacemos que el título se alinee a la izquierda
+ * en lugar de usar el centrado por defecto de .section__title
+*/
+.about__title {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.about__description {
+  font-size: 1rem;
+  color: var(--text-light-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.about__details {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column; /* Misión y Valores uno debajo del otro en móvil */
+  gap: 1.5rem;
+}
+
+.about__detail-title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem; /* 18px */
+  color: var(--accent-primary);
+  margin-bottom: 0.25rem;
+}
+
+.about__detail-text {
+  color: var(--text-light-secondary);
+}
+
+
+/* --- Estilos "Sobre Mí" (Media Query para Desktop) --- */
+
+@media screen and (min-width: 768px) {
+  
+  /* * Títulos de sección un poco más grandes en desktop
+  */
+  .section__title {
+    font-size: 2.5rem; /* 40px */
+    margin-bottom: 3rem;
+  }
+
+  .about__container {
+    /* Creamos 2 columnas: la foto (1fr) y el contenido (1.5fr) */
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center; /* Alineamos verticalmente */
+    gap: 4rem; /* Más espacio en desktop */
+  }
+
+  .about__image-wrapper {
+    max-width: 100%; /* La foto ocupa el ancho de su columna */
+  }
+  
+  .about__details {
+    flex-direction: row; /* Ponemos Misión y Valores uno al lado del otro */
+    gap: 2.5rem;
+  }
+}
+
+
+
+
+
+/* ============================================= */
+/* === 9. SECCIÓN HABILIDADES (STACK) ========== */
+/* ============================================= */
+
+.skills__container {
+  /* Limitamos el ancho de la cuadrícula en pantallas grandes */
+  max-width: 700px; 
+}
+
+.skills__grid {
+  display: grid;
+  /* * Corrección: Definimos 2 columnas fijas en móvil
+   * para un look más ordenado que auto-fit.
+  */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  
+  background-color: var(--bg-dark-secondary);
+  padding: 1.5rem 1rem;
+  border-radius: var(--border-radius-base);
+  
+  /* Sombra sutil para darle profundidad */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Efecto de 'hover' sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills__item:hover {
+  transform: translateY(-5px); /* Se "eleva" ligeramente */
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1); /* Sombra de acento */
+}
+
+.skills__icon {
+  height: 50px; /* Tamaño fijo para todos los iconos */
+  width: 50px;
+  object-fit: contain; /* Asegura que el SVG escale bien */
+}
+
+.skills__name {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-light-secondary);
+}
+
+
+/* --- Media Query para Habilidades --- */
+/* * A partir de 768px (tablets), pasamos
+ * de 2 columnas a 4 columnas.
+*/
+@media screen and (min-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skills__container {
+    max-width: 800px; /* Damos un poco más de espacio */
+  }
+}
+
+
+
+
+/* ============================================= */
+/* === 10. SECCIÓN PROYECTOS =================== */
+/* ============================================= */
+
+/* --- Cuadrícula de Proyectos (Grid) --- */
+.projects__grid {
+  display: grid;
+  /* Mobile-First: 1 columna */
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* --- Estilos de la Tarjeta (Card) --- */
+.project-card {
+  background-color: var(--bg-dark-secondary);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Asegura que la imagen respete los bordes redondeados */
+  
+  display: flex;
+  flex-direction: column; /* Apila imagen y contenido verticalmente */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15); /* Sombra de acento */
+}
+
+.project-card__image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Fuerza una proporción 16:9 para la imagen */
+  overflow: hidden;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.05); /* Sutil efecto de zoom en la imagen */
+}
+
+.project-card__content {
+  padding: 1.5rem;
+  /* flex-grow: 1; 
+     Permite que el contenido crezca y empuje los botones 
+     hacia abajo, alineándolos si las tarjetas tienen 
+     alturas diferentes (debido al texto).
+  */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.project-card__title {
+  font-size: 1.5rem; /* 24px */
+  font-family: var(--font-heading);
+  color: var(--text-light-primary);
+  margin-bottom: 0.75rem;
+}
+
+.project-card__description {
+  font-size: 0.95rem;
+  color: var(--text-light-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  /* Esta línea es clave para alinear los botones al final */
+  flex-grow: 1; 
+}
+
+/* --- Tags de Tecnologías --- */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card__tag {
+  background-color: var(--bg-dark-primary); /* Fondo más oscuro */
+  color: var(--accent-primary); /* Texto de acento */
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px; /* Estilo "píldora" */
+}
+
+/* --- Enlaces (GitHub/Demo) --- */
+.project-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* Empuja los enlaces al final de la tarjeta */
+}
+
+.project-card__link {
+  /* Los estilos base vienen de .btn */
+  padding: 0.5rem 1rem; /* Botones un poco más pequeños */
+  font-size: 0.9rem;
+}
+
+
+/* --- Media Queries para la Cuadrícula de Proyectos --- */
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* * Desktops (AQUÍ ESTÁ LA CORRECCIÓN)
+ * * En lugar de 3 columnas, mantenemos 2.
+ * Pero para que no se estiren demasiado en pantallas anchas,
+ * limitamos el ancho de la cuadrícula y la centramos.
+*/
+@media screen and (min-width: 1024px) {
+  .projects__grid {
+    /* 1. Mantenemos 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+    
+    /* 2. Definimos un ancho máximo para la cuadrícula */
+    max-width: 960px; /* (Puedes ajustar este valor si quieres) */
+    
+    /* 3. Centramos la cuadrícula (que ahora es más angosta) */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.project-card__image--contain {
+  object-fit: contain; /* Asegura que la imagen se vea completa */
+  background-color: #0c101a; /* Un color de fondo para las barras */
+}
+
+
+/* ============================================= */
+/* === 11. SECCIÓN CONTACTO ==================== */
+/* ============================================= */
+
+.contact__container {
+  /* Usamos flex para centrar todo el contenido verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact__description {
+  font-size: 1.125rem; /* 18px */
+  color: var(--text-light-secondary);
+  max-width: 500px; /* Evita que el texto sea muy ancho */
+  margin-bottom: 2.5rem;
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap; /* Para móviles pequeños */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact__link {
+  /* Hacemos los botones un poco más grandes */
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+
+/* ============================================= */
+/* === 12. FOOTER (PIE DE PÁGINA) ============== */
+/* ============================================= */
+
+.footer {
+  background-color: var(--bg-dark-secondary);
+  border-top: 1px solid var(--bg-dark-primary);
+  padding: 3rem 0;
+  margin-top: 5rem; /* Espacio para separarlo de 'Contacto' */
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__social-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+  color: var(--accent-primary);
+}
+
+.footer__copy,
+.footer__credits {
+  font-size: 0.9rem;
+  color: var(--text-light-secondary);
+}
+
+.footer__credits {
+  font-size: 0.8rem;
+}
+
+
+/* ============================================= */
+/* === 13. JAVASCRIPT (Clases de Activación) === */
+/* ============================================= */
+
+/* * Esta clase 'show-menu' será añadida/quitada por JS 
+ * para mostrar u ocultar el menú en móviles.
+*/
+@media screen and (max-width: 767px) {
+  /* * Usamos max-width: 767px (un píxel menos que 
+   * nuestra media query de desktop) para asegurarnos
+   * que estos estilos SÓLO aplican en móvil.
+  */
+  
+  .navbar__menu.show-menu {
+    display: block; /* Sobrescribe el 'display: none' */
+    
+    /* Estilos para el menú desplegado */
+    position: absolute;
+    top: 4.5rem; /* Justo debajo de la navbar (que mide 4.5rem) */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark-secondary);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--bg-dark-primary);
+  }
+
+  /* * Hacemos que los <li> se apilen verticalmente
+   * en lugar de horizontalmente.
+  */
+  .navbar__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre enlaces */
+  }
+
+  .navbar__link {
+    color: var(--text-light-primary); /* Texto más visible */
+    font-size: 1.1rem;
+  }
+
+  .navbar__link:hover {
+    color: var(--accent-primary);
+  }
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Portafolio | Ingeniero de Software</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="header" id="header">
+    <nav class="navbar container">
+        <a href="#inicio" class="navbar__logo">Arturo Adrianzén</a>
+
+        <div class="navbar__menu" id="nav-menu">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#inicio" class="navbar__link">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#sobre-mi" class="navbar__link">Sobre Mí</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#proyectos" class="navbar__link">Proyectos</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contacto" class="navbar__link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="navbar__actions">
+            <a href="assets/Arturo Adrianzén CV.pdf" class="btn btn--primary navbar__btn-cv" download>Descargar CV</a>
+            
+            <div class="navbar__toggle" id="nav-toggle">
+                MENU
+            </div>
+        </div>
+    </nav>
+</header>
+<main> <section class="hero section" id="inicio">
+        <div class="hero__container container grid">
+            <div class="hero__content">
+                <span class="hero__greeting">Hola, mi nombre es</span>
+                <h1 class="hero__title">Carlos Arturo Adrianzén Flores</h1>
+                <h2 class="hero__subtitle">Ingeniero de Software en formación</h2>
+                <p class="hero__description">
+                Estudiante de 8vo ciclo en UPC. Mi objetivo es especializarme en Ciberseguridad, 
+                mientras construyo una base sólida en desarrollo de software y me mantengo abierto a nuevos desafíos.
+                </p>
+                
+                <div class="hero__links">
+                    <a href="https://www.linkedin.com/in/aadrianzen/" target="_blank" rel="noopener noreferrer" class="hero__link btn btn--secondary">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="hero__link btn btn--outline">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            
+            </div>
+    </section>
+<section class="about section" id="sobre-mi">
+    <div class="about__container container grid">
+        
+        <div class="about__image-wrapper">
+            <img src="assets/img/Carlos.jpg" alt="Foto profesional de Carlos Adrianzén" class="about__image">
+        </div>
+
+        <div class="about__content">
+            <h2 class="section__title about__title">Sobre Mí</h2>
+            
+            <p class="about__description">
+                Soy estudiante de Ingeniería de Software en la UPC, con un profundo interés 
+                en la ciberseguridad y el desarrollo backend. Me apasiona entender 
+                cómo funcionan los sistemas a un nivel fundamental para poder protegerlos 
+                y optimizarlos.
+            </p>
+            <p class="about__description">
+                Busco aplicar mis conocimientos teóricos en proyectos desafiantes y 
+                aprender de mentores en la industria, con el objetivo de convertirme 
+                en un profesional íntegro y capaz de aportar valor real.
+            </p>
+
+            <div class="about__details">
+                <div class="about__detail-item">
+                    <h3 class="about__detail-title">Mi Misión</h3>
+                    <p class="about__detail-text">Aportar a la creación de un entorno digital más seguro, un sistema a la vez.</p>
+                </div>
+                <div class="about__detail-item">
+                    <h3 class="about__detail-title">Valores</h3>
+                    <p class="about__detail-text">Curiosidad, Integridad y Aprendizaje Continuo.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="skills section" id="habilidades">
+    <h2 class="section__title">Mi Stack Tecnológico</h2>
+
+    <div class="skills__container container grid">
+        <div class="skills__grid">
+
+            <div class="skills__item">
+                <img src="assets/icons/java.svg" alt="Logo de Java" class="skills__icon">
+                <span class="skills__name">Java</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/spring.svg" alt="Logo de Spring Boot" class="skills__icon">
+                <span class="skills__name">Spring Boot</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/python.svg" alt="Logo de Python" class="skills__icon">
+                <span class="skills__name">Python</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/angular.svg" alt="Logo de Angular" class="skills__icon">
+                <span class="skills__name">Angular</span>
+            </div>
+
+            <div class="skills__item">
+                <img src="assets/icons/sql.svg" alt="Logo de SQL" class="skills__icon">
+                <span class="skills__name">SQL</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/docker.svg" alt="Logo de Docker" class="skills__icon">
+                <span class="skills__name">Docker</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/git.svg" alt="Logo de Git" class="skills__icon">
+                <span class="skills__name">Git</span>
+            </div>
+            <div class="skills__item">
+                <img src="assets/icons/javascript.svg" alt="Logo de JavaScript" class="skills__icon">
+                <span class="skills__name">JavaScript</span>
+            </div>
+            
+            </div>
+    </div>
+</section>
+
+<section class="projects section" id="proyectos">
+    <h2 class="section__title">Mis Proyectos</h2>
+
+    <div class="projects__container container">
+        <div class="projects__grid">
+
+    <article class="project-card">
+        <div class="project-card__image-wrapper">
+            <img src="assets/img/diligencetech.png" 
+     alt="Vista previa del proyecto DiligenceTech" 
+     class="project-card__image project-card__image--contain">
+        </div>
+
+        <div class="project-card__content">
+            <h3 class="project-card__title">DiligenceTech</h3>
+            <p class="project-card__description">
+                Aplicación de página única (SPA) para un software de almacenamiento de datos dedicado a la interacción comprador-vendedor y la ejecución de la diligencia debida.
+            </p>
+
+            <div class="project-card__tags">
+                <span class="project-card__tag">Angular</span>
+                <span class="project-card__tag">Spring Boot</span>
+                <span class="project-card__tag">Firebase</span>
+            </div>
+
+            <div class="project-card__links">
+                <a href="https://github.com/choliwys/DiligenceTech" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
+                    GitHub
+                </a>
+                </div>
+        </div>
+    </article>
+
+    <article class="project-card">
+        <div class="project-card__image-wrapper">
+            <img src="assets/img/paway.png" alt="Vista previa del proyecto PawayApp" class="project-card__image">
+        </div>
+
+        <div class="project-card__content">
+            <h3 class="project-card__title">PawayApp (Móvil)</h3>
+            <p class="project-card__description">
+                App móvil para mejorar la gestión financiera de microempresas. Automatiza facturas, presupuestos, gastos y genera reportes financieros.
+            </p>
+
+            <div class="project-card__tags">
+                <span class="project-card__tag">Kotlin</span>
+                <span class="project-card__tag">Spring Boot</span>
+                <span class="project-card__tag">Android Studio</span>
+            </div>
+
+            <div class="project-card__links">
+                <a href="https://github.com/choliwys/PawayMobileApp" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </article>
+
+</div>
+            </article>
+
+            </div>
+    </div>
+</section>
+<section class="contact section" id="contacto">
+    <div class="contact__container container">
+        <h2 class="section__title">Hablemos</h2>
+        <p class="contact__description">
+            Estoy abierto a nuevas oportunidades y desafíos. 
+            Si tienes un proyecto en mente o crees que podría 
+            encajar en tu equipo, no dudes en contactarme.
+        </p>
+        
+        <div class="contact__links">
+            <a href="mailto:cartureto@gmail.com" class="contact__link btn btn--primary">
+                Envíame un Email
+            </a>
+            <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="contact__link btn btn--outline">
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+    </main> <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__socials">
+            <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                LinkedIn
+            </a>
+        </div>
+        
+        <p class="footer__copy">
+            &copy; 2025 Carlos Adrianzén. Todos los derechos reservados.
+        </p>
+        <p class="footer__credits">
+            Diseñado y construido desde cero por mí.
+        </p>
+    </div>
+</footer>
+</body>
+</html>

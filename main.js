@@ -48,3 +48,24 @@ function linkAction() {
 navLinks.forEach(link => {
   link.addEventListener('click', linkAction);
 });
+
+
+/* ============================================= */
+/* === MÓDULO 3: SCROLL REVEAL (Observer) ====== */
+/* ============================================= */
+
+const observerOptions = {
+    threshold: 0.15 // El elemento se activa cuando el 15% es visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, observerOptions);
+
+// Seleccionamos todos los elementos con la clase .reveal y los observamos
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach(el => observer.observe(el));

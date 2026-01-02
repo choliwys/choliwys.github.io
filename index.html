@@ -71,11 +71,11 @@
 <section class="about section" id="sobre-mi">
     <div class="about__container container grid">
         
-        <div class="about__image-wrapper">
+        <div class="about__image-wrapper" class="project-card reveal">
             <img src="assets/img/Carlos.jpg" alt="Foto profesional de Carlos Adrianzén" class="about__image">
         </div>
 
-        <div class="about__content">
+        <div class="about__content reveal">
             <h2 class="section__title about__title">Sobre Mí</h2>
             
             <p class="about__description">
@@ -110,42 +110,39 @@
 
     <div class="skills__container container grid">
         <div class="skills__grid">
-
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/java.svg" alt="Logo de Java" class="skills__icon">
                 <span class="skills__name">Java</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/spring.svg" alt="Logo de Spring Boot" class="skills__icon">
                 <span class="skills__name">Spring Boot</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/python.svg" alt="Logo de Python" class="skills__icon">
                 <span class="skills__name">Python</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/angular.svg" alt="Logo de Angular" class="skills__icon">
                 <span class="skills__name">Angular</span>
             </div>
-
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/sql.svg" alt="Logo de SQL" class="skills__icon">
                 <span class="skills__name">SQL</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/docker.svg" alt="Logo de Docker" class="skills__icon">
                 <span class="skills__name">Docker</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/git.svg" alt="Logo de Git" class="skills__icon">
                 <span class="skills__name">Git</span>
             </div>
-            <div class="skills__item">
+            <div class="skills__item reveal">
                 <img src="assets/icons/javascript.svg" alt="Logo de JavaScript" class="skills__icon">
                 <span class="skills__name">JavaScript</span>
             </div>
-            
-            </div>
+        </div>
     </div>
 </section>
 
@@ -155,7 +152,7 @@
     <div class="projects__container container">
         <div class="projects__grid">
 
-            <article class="project-card">
+            <article class="project-card reveal">
                 <div class="project-card__image-wrapper">
                     <img src="assets/img/churn-dashboard.png" 
                          alt="Dashboard de Análisis de Fuga en Power BI" 
@@ -183,7 +180,7 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal">
                 <div class="project-card__image-wrapper">
                     <img src="assets/img/diligencetech.png" 
                          alt="Vista previa del proyecto DiligenceTech" 
@@ -210,7 +207,7 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal">
                 <div class="project-card__image-wrapper">
                     <img src="assets/img/paway.png" alt="Vista previa del proyecto PawayApp" class="project-card__image">
                 </div>
@@ -234,6 +231,35 @@
                     </div>
                 </div>
             </article>
+
+            <article class="project-card reveal">
+    <div class="project-card__image-wrapper">
+        <img src="assets/img/proyecto-kingdom-defense.jpg" alt="Vista previa de Kingdom Defense" class="project-card__image">
+    </div>
+
+    <div class="project-card__content">
+        <h3 class="project-card__title">Kingdom Defense</h3>
+        <p class="project-card__description">
+            Juego de estrategia desarrollado con Vanilla JavaScript y Canvas API. Implementa arquitectura modular ES6, sistema de oleadas y audio sintetizado en tiempo real.
+        </p>
+
+        <div class="project-card__tags">
+            <span class="project-card__tag">JavaScript</span>
+            <span class="project-card__tag">Canvas API</span>
+            <span class="project-card__tag">Web Audio</span>
+            <span class="project-card__tag">Node.js</span>
+        </div>
+
+        <div class="project-card__links">
+            <a href="https://github.com/choliwys/KingdomDefense" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
+                GitHub
+            </a>
+            <a href="https://kingdom-defense-ten.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--secondary">
+                Demo
+            </a>
+        </div>
+    </div>
+</article>
 
         </div>
     </div>
@@ -260,23 +286,14 @@
 </section>
     </main>
     </main> <footer class="footer">
-    <div class="footer__container container">
-        <div class="footer__socials">
-            <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="footer__social-link">
-                GitHub
-            </a>
-            <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="footer__social-link">
-                LinkedIn
-            </a>
+        <div class="footer__container container">
+            <div class="footer__socials">
+                <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="footer__social-link">GitHub</a>
+                <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="footer__social-link">LinkedIn</a>
+            </div>
+            <p class="footer__copy">&copy; 2025 Carlos Adrianzén. Todos los derechos reservados.</p>
+            <p class="footer__credits">Diseñado y construido desde cero por mí.</p>
         </div>
-        
-        <p class="footer__copy">
-            &copy; 2025 Carlos Adrianzén. Todos los derechos reservados.
-        </p>
-        <p class="footer__credits">
-            Diseñado y construido desde cero por mí.
-        </p>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>

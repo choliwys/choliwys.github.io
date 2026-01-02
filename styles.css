@@ -628,27 +628,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Media Queries para la Cuadrícula de Proyectos --- */
 
-/* Tablets */
+/* Tablets (A partir de 768px): Mantenemos 2 columnas */
 @media screen and (min-width: 768px) {
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* * Desktops (AQUÍ ESTÁ LA CORRECCIÓN)
- * * En lugar de 3 columnas, mantenemos 2.
- * Pero para que no se estiren demasiado en pantallas anchas,
- * limitamos el ancho de la cuadrícula y la centramos.
+/* Desktops (A partir de 1024px): 
+   Ahora activamos las 3 columnas y ampliamos el ancho máximo 
 */
 @media screen and (min-width: 1024px) {
   .projects__grid {
-    /* 1. Mantenemos 2 columnas */
-    grid-template-columns: repeat(2, 1fr);
+    /* 1. Cambiamos a 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
     
-    /* 2. Definimos un ancho máximo para la cuadrícula */
-    max-width: 960px; /* (Puedes ajustar este valor si quieres) */
+    /* 2. Ampliamos el ancho máximo para que quepan bien las 3 cards */
+    max-width: 1120px; 
     
-    /* 3. Centramos la cuadrícula (que ahora es más angosta) */
     margin-left: auto;
     margin-right: auto;
   }
@@ -785,4 +782,22 @@ h1, h2, h3, h4, h5, h6 {
   .navbar__link:hover {
     color: var(--accent-primary);
   }
+}
+
+
+/* ============================================= */
+/* === 14. ANIMACIONES DE REVELADO ============= */
+/* ============================================= */
+
+/* Estado inicial: oculto y un poco hacia abajo */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado activo: visible y en su posición original */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

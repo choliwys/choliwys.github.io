@@ -1,316 +1,317 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" data-lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Mi Portafolio | Ingeniero de Software</title>
-
-    <meta name="description" content="Portafolio profesional de Carlos Arturo Adrianzén Flores. Estudiante de 8vo ciclo de Ingeniería de Software en UPC con interés en Ciberseguridad y Desarrollo Backend.">
-    <meta name="keywords" content="Carlos Adrianzen, Ingeniero de Software, UPC, Ciberseguridad, Backend, Java, Portafolio">
-    <meta name="author" content="Carlos Arturo Adrianzén Flores">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://choliwys.github.io/">
-    <meta property="og:title" content="Carlos Arturo Adrianzén | Ingeniero de Software en formación">
-    <meta property="og:description" content="Explora mis proyectos de desarrollo de software, ciberseguridad y lógica de videojuegos.">
-    <meta property="og:image" content="https://choliwys.github.io/assets/img/preview-portfolio.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://choliwys.github.io/">
-    <meta property="twitter:title" content="Carlos Arturo Adrianzén | Ingeniero de Software">
-    <meta property="twitter:description" content="Estudiante de Ingeniería de Software en UPC apasionado por la tecnología y la seguridad.">
-    <meta property="twitter:image" content="https://choliwys.github.io/assets/img/preview-portfolio.jpg">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-    
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arturo Adrianzén | Security Infrastructure Intern</title>
+  <meta name="description" content="Software Engineering student focused on defensive and infrastructure security: Wazuh SIEM lab, log analysis, alert triage, Active Directory and Microsoft Entra ID.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arturo Adrianzén | Security Infrastructure Intern">
+  <meta property="og:description" content="Wazuh SOC lab, log analysis, alert triage and access management. Open to security internships.">
+  <meta property="og:url" content="https://choliwys.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header" id="header">
-    <nav class="navbar container">
-        <a href="#inicio" class="navbar__logo">Arturo Adrianzén</a>
+  <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="es">Saltar al contenido</span></a>
 
-        <div class="navbar__menu" id="nav-menu">
-            <ul class="navbar__list">
-                <li class="navbar__item">
-                    <a href="#inicio" class="navbar__link">Inicio</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#sobre-mi" class="navbar__link">Sobre Mí</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#proyectos" class="navbar__link">Proyectos</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#contacto" class="navbar__link">Contacto</a>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="navbar__actions">
-            <a href="assets/Arturo Adrianzén CV.pdf" class="btn btn--primary navbar__btn-cv" download>Descargar CV</a>
-            
-            <div class="navbar__toggle" id="nav-toggle">
-                MENU
-            </div>
-        </div>
-    </nav>
-</header>
-<main> <section class="hero section" id="inicio">
-        <div class="hero__container container grid">
-            <div class="hero__content">
-                <span class="hero__greeting">Hola, mi nombre es</span>
-                <h1 class="hero__title">Carlos Arturo Adrianzén Flores</h1>
-                <h2 class="hero__subtitle">Ingeniero de Software en formación</h2>
-                <p class="hero__description">
-                Estudiante de 8vo ciclo en UPC. Mi objetivo es especializarme en Ciberseguridad, 
-                mientras construyo una base sólida en desarrollo de software y me mantengo abierto a nuevos desafíos.
-                </p>
-                
-                <div class="hero__links">
-                    <a href="https://www.linkedin.com/in/aadrianzen/" target="_blank" rel="noopener noreferrer" class="hero__link btn btn--secondary">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="hero__link btn btn--outline">
-                        GitHub
-                    </a>
-                </div>
-            </div>
-            
-            </div>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="nav__brand" href="#top">~/arturo<span class="cursor">_</span></a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#lab"><span lang="en">SOC Lab</span><span lang="es">Lab SOC</span></a>
+        <a href="#experience"><span lang="en">Experience</span><span lang="es">Experiencia</span></a>
+        <a href="#projects"><span lang="en">Projects</span><span lang="es">Proyectos</span></a>
+        <a href="#skills"><span lang="en">Skills</span><span lang="es">Skills</span></a>
+        <a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap" id="top">
+      <p class="prompt"><span class="prompt__sym">$</span> whoami</p>
+      <h1>Carlos Arturo Adrianzén Flores</h1>
+      <p class="hero__role">
+        <span lang="en">Security Infrastructure Intern candidate</span>
+        <span lang="es">Candidato a Security Infrastructure Intern</span>
+      </p>
+      <p class="hero__lead">
+        <span lang="en">Software Engineering student at UPC (top fifth, GPA 17.02/20) focused on defensive and infrastructure security. I build and operate a Wazuh SIEM lab, triage alerts, document findings, and manage access with Active Directory and Microsoft Entra ID.</span>
+        <span lang="es">Estudiante de Ingeniería de Software en la UPC (quinto superior, promedio 17.02/20) enfocado en seguridad defensiva y de infraestructura. Construyo y opero un laboratorio SIEM con Wazuh, analizo alertas, documento hallazgos y gestiono accesos con Active Directory y Microsoft Entra ID.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn--primary" href="assets/docs/Adrianzen_CV.pdf" download>
+          <span lang="en">Download CV</span><span lang="es">Descargar CV</span>
+        </a>
+        <a class="btn" href="https://github.com/choliwys" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/aadrianzen/" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://profile.hackthebox.com/profile/01a08487-c328-7143-919f-c6da25d6af4f" rel="noopener">Hack The Box</a>
+        <a class="btn" href="mailto:cartureto@gmail.com">Email</a>
+      </div>
+      <ul class="chips" aria-label="Highlights">
+        <li>Lima, Perú</li>
+        <li><a href="https://profile.hackthebox.com/profile/01a08487-c328-7143-919f-c6da25d6af4f" rel="noopener"><span lang="en">HTB SOC Analyst path · in progress</span><span lang="es">HTB SOC Analyst path · en curso</span></a></li>
+        <li>Google Cybersecurity Professional</li>
+        <li><span lang="en">Expected graduation: July 2027</span><span lang="es">Egreso esperado: julio 2027</span></li>
+      </ul>
     </section>
-<section class="about section" id="sobre-mi">
-    <div class="about__container container grid">
-        
-        <div class="about__image-wrapper" class="project-card reveal">
-            <img src="assets/img/Carlos.jpg" alt="Foto profesional de Carlos Adrianzén" class="about__image">
-        </div>
 
-        <div class="about__content reveal">
-            <h2 class="section__title about__title">Sobre Mí</h2>
-            
-            <p class="about__description">
-                Soy estudiante de Ingeniería de Software en la UPC, con un profundo interés 
-                en la ciberseguridad y el desarrollo backend. Me apasiona entender 
-                cómo funcionan los sistemas a un nivel fundamental para poder protegerlos 
-                y optimizarlos.
-            </p>
-            <p class="about__description">
-                Busco aplicar mis conocimientos teóricos en proyectos desafiantes y 
-                aprender de mentores en la industria, con el objetivo de convertirme 
-                en un profesional íntegro y capaz de aportar valor real.
-            </p>
+    <!-- FEATURED LAB -->
+    <section class="wrap section" id="lab">
+      <h2><span class="h-sym">01</span>
+        <span lang="en">Home SOC Lab with Wazuh</span><span lang="es">Home SOC Lab con Wazuh</span>
+      </h2>
+      <p class="lead">
+        <span lang="en">A defensive, authorized lab on my own hardware and private network. It centralizes endpoint telemetry, and I use it to practice the daily SOC loop: detect, triage, investigate, document. No attacks against third parties, no corporate data.</span>
+        <span lang="es">Un laboratorio defensivo y autorizado, en mi propio hardware y red privada. Centraliza la telemetría de un endpoint y lo uso para practicar el ciclo diario de un SOC: detectar, clasificar, investigar y documentar. Sin ataques a terceros ni datos corporativos.</span>
+      </p>
 
-            <div class="about__details">
-                <div class="about__detail-item">
-                    <h3 class="about__detail-title">Mi Misión</h3>
-                    <p class="about__detail-text">Aportar a la creación de un entorno digital más seguro, un sistema a la vez.</p>
-                </div>
-                <div class="about__detail-item">
-                    <h3 class="about__detail-title">Valores</h3>
-                    <p class="about__detail-text">Curiosidad, Integridad y Aprendizaje Continuo.</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
+      <ul class="stats">
+        <li><strong>4.14.7</strong><span>Wazuh</span></li>
+        <li><strong>24.04 LTS</strong><span>Ubuntu Server</span></li>
+        <li><strong>3</strong><span><span lang="en">detections</span><span lang="es">detecciones</span></span></li>
+        <li><strong>3</strong><span><span lang="en">incident reports</span><span lang="es">reportes de incidente</span></span></li>
+      </ul>
 
-<section class="skills section" id="habilidades">
-    <h2 class="section__title">Mi Stack Tecnológico</h2>
-
-    <div class="skills__container container grid">
-        <div class="skills__grid">
-            <div class="skills__item reveal">
-                <img src="assets/icons/java.svg" alt="Logo de Java" class="skills__icon">
-                <span class="skills__name">Java</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/spring.svg" alt="Logo de Spring Boot" class="skills__icon">
-                <span class="skills__name">Spring Boot</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/python.svg" alt="Logo de Python" class="skills__icon">
-                <span class="skills__name">Python</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/angular.svg" alt="Logo de Angular" class="skills__icon">
-                <span class="skills__name">Angular</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/sql.svg" alt="Logo de SQL" class="skills__icon">
-                <span class="skills__name">SQL</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/docker.svg" alt="Logo de Docker" class="skills__icon">
-                <span class="skills__name">Docker</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/git.svg" alt="Logo de Git" class="skills__icon">
-                <span class="skills__name">Git</span>
-            </div>
-            <div class="skills__item reveal">
-                <img src="assets/icons/javascript.svg" alt="Logo de JavaScript" class="skills__icon">
-                <span class="skills__name">JavaScript</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projects section" id="proyectos">
-    <h2 class="section__title">Mis Proyectos</h2>
-
-    <div class="projects__container container">
-        <div class="projects__grid">
-
-            <article class="project-card reveal">
-                <div class="project-card__image-wrapper">
-                    <img src="assets/img/churn-dashboard.png" 
-                         alt="Dashboard de Análisis de Fuga en Power BI" 
-                         class="project-card__image">
-                </div>
-
-                <div class="project-card__content">
-                    <h3 class="project-card__title">Telecom Churn Analytics</h3>
-                    <p class="project-card__description">
-                        Pipeline ETL end-to-end en la nube. Extracción automatizada de datos con Python, almacenamiento seguro en AWS S3 y visualización de KPIs de fuga de clientes en Power BI.
-                    </p>
-
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">AWS S3</span>
-                        <span class="project-card__tag">Python (Pandas)</span>
-                        <span class="project-card__tag">Power BI</span>
-                        <span class="project-card__tag">ETL</span>
-                    </div>
-
-                    <div class="project-card__links">
-                        <a href="https://github.com/choliwys/telecom-churn-analytics" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card reveal">
-                <div class="project-card__image-wrapper">
-                    <img src="assets/img/diligencetech.png" 
-                         alt="Vista previa del proyecto DiligenceTech" 
-                         class="project-card__image project-card__image--contain">
-                </div>
-
-                <div class="project-card__content">
-                    <h3 class="project-card__title">DiligenceTech</h3>
-                    <p class="project-card__description">
-                        SPA para Due Diligence que conecta compradores y vendedores. Gestión de datos en tiempo real y arquitectura basada en componentes.
-                    </p>
-
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">Angular</span>
-                        <span class="project-card__tag">Spring Boot</span>
-                        <span class="project-card__tag">Firebase</span>
-                    </div>
-
-                    <div class="project-card__links">
-                        <a href="https://github.com/choliwys/DiligenceTech" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card reveal">
-                <div class="project-card__image-wrapper">
-                    <img src="assets/img/paway.png" alt="Vista previa del proyecto PawayApp" class="project-card__image">
-                </div>
-
-                <div class="project-card__content">
-                    <h3 class="project-card__title">PawayApp (Móvil)</h3>
-                    <p class="project-card__description">
-                        App nativa Android para gestión financiera de MYPEs. Automatización de facturas, presupuestos y reportes de gastos.
-                    </p>
-
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">Kotlin</span>
-                        <span class="project-card__tag">Android SDK</span>
-                        <span class="project-card__tag">Spring Boot</span>
-                    </div>
-
-                    <div class="project-card__links">
-                        <a href="https://github.com/choliwys/PawayMobileApp" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card reveal">
-    <div class="project-card__image-wrapper">
-        <img src="assets/img/proyecto-kingdom-defense.jpg" alt="Vista previa de Kingdom Defense" class="project-card__image">
-    </div>
-
-    <div class="project-card__content">
-        <h3 class="project-card__title">Kingdom Defense</h3>
-        <p class="project-card__description">
-            Juego de estrategia desarrollado con Vanilla JavaScript y Canvas API. Implementa arquitectura modular ES6, sistema de oleadas y audio sintetizado en tiempo real.
+      <div class="card">
+        <h3><span lang="en">Architecture</span><span lang="es">Arquitectura</span></h3>
+<pre class="diagram" aria-label="Lab architecture: central node with Wazuh Manager, Indexer, Dashboard and Filebeat receives telemetry from the ubuntu-primary agent over the private LAN">┌──────────────────────────────────────┐
+│ wazuh-lab · Ubuntu Server 24.04.4    │
+│ Manager · Indexer · Dashboard        │
+│ Filebeat · UFW (LAN only)            │
+└───────────────────┬──────────────────┘
+                    │ Wazuh Agent telemetry
+          ┌─────────▼─────────┐
+          │ ubuntu-primary    │
+          │ agent 4.14.7      │
+          │ group: linux-lab  │
+          └───────────────────┘</pre>
+        <p class="note">
+          <span lang="en">Hardened with UFW restricted to the lab LAN, HTTPS dashboard, rotated initial credentials. A Windows endpoint is planned for when I have a suitable host.</span>
+          <span lang="es">Endurecido con UFW limitado a la LAN del lab, dashboard por HTTPS y credenciales iniciales rotadas. Un endpoint Windows está planificado para cuando tenga un host adecuado.</span>
         </p>
+      </div>
+      <figure class="card shot shots">
+        <img src="assets/lab/agent-active.png" width="1887" height="581" alt="Wazuh Dashboard Endpoints view showing one active Ubuntu agent, version 4.14.7, in the linux-lab group" loading="lazy">
+        <figcaption><span lang="en">Agent <code>ubuntu-primary</code> active (sanitized). Click to enlarge.</span><span lang="es">Agente <code>ubuntu-primary</code> activo (sanitizado). Clic para ampliar.</span></figcaption>
+      </figure>
 
-        <div class="project-card__tags">
-            <span class="project-card__tag">JavaScript</span>
-            <span class="project-card__tag">Canvas API</span>
-            <span class="project-card__tag">Web Audio</span>
-            <span class="project-card__tag">Node.js</span>
-        </div>
+      <h3 class="sub"><span lang="en">Detection cases</span><span lang="es">Casos de detección</span></h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th><span lang="en">Signal</span><span lang="es">Señal</span></th>
+              <th><span lang="en">Rule</span><span lang="es">Regla</span></th>
+              <th>MITRE ATT&amp;CK</th>
+              <th><span lang="en">Outcome</span><span lang="es">Resultado</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DET-001</td>
+              <td><span lang="en">File created, modified, deleted in an isolated FIM directory</span><span lang="es">Archivo creado, modificado y borrado en un directorio FIM aislado</span></td>
+              <td><code>554</code> <code>550</code> <code>553</code></td>
+              <td><code>T1565.001</code> <code>T1070.004</code> <code>T1485</code></td>
+              <td><span lang="en">Closed, authorized test</span><span lang="es">Cerrado, prueba autorizada</span></td>
+            </tr>
+            <tr>
+              <td>DET-002</td>
+              <td><span lang="en">SSH attempt with a non-existent user</span><span lang="es">Intento SSH con usuario inexistente</span></td>
+              <td><code>5710</code></td>
+              <td><span lang="en">None assigned (single attempt is not brute force)</span><span lang="es">Ninguna (un intento único no es fuerza bruta)</span></td>
+              <td><span lang="en">Closed, authorized test</span><span lang="es">Cerrado, prueba autorizada</span></td>
+            </tr>
+            <tr>
+              <td>DET-003</td>
+              <td><span lang="en">Controlled command run with <code>sudo</code></span><span lang="es">Comando controlado con <code>sudo</code></span></td>
+              <td><code>5402</code></td>
+              <td><code>T1548.003</code></td>
+              <td><span lang="en">Closed, authorized test</span><span lang="es">Cerrado, prueba autorizada</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        <span lang="en">Each case has a reproducible procedure and a sanitized incident report that states what would change the verdict outside a lab (source, frequency, repeated attempts, later successful logins). A rule firing is a lead to investigate, not proof of malicious activity.</span>
+        <span lang="es">Cada caso tiene un procedimiento reproducible y un reporte de incidente sanitizado que indica qué cambiaría el veredicto fuera de un lab (origen, frecuencia, intentos repetidos, accesos exitosos posteriores). Una regla disparada es una pista a investigar, no prueba de actividad maliciosa.</span>
+      </p>
 
-        <div class="project-card__links">
-            <a href="https://github.com/choliwys/KingdomDefense" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--outline">
-                GitHub
-            </a>
-            <a href="https://kingdom-defense-ten.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link btn btn--secondary">
-                Demo
-            </a>
-        </div>
+      <figure class="card shot shots">
+        <img src="assets/lab/det-001-fim.png" width="1887" height="686" alt="Wazuh Threat Hunting events filtered by rules 554, 553 and 550 showing three FIM alerts on ubuntu-primary" loading="lazy">
+        <figcaption>DET-001 · FIM · <code>554 → 550 → 553</code> <span lang="en">Click to enlarge.</span><span lang="es">Clic para ampliar.</span></figcaption>
+      </figure>
+      <div class="grid2 shots">
+        <figure class="card shot">
+          <img src="assets/lab/det-002-ssh.png" width="939" height="1012" alt="Wazuh document details for rule 5710, sshd attempt to login using a non-existent user, with network fields redacted" loading="lazy">
+          <figcaption>DET-002 · SSH · <code>5710</code></figcaption>
+        </figure>
+        <figure class="card shot">
+          <img src="assets/lab/det-003-sudo.png" width="947" height="1005" alt="Wazuh document details for the sudo rule: successful sudo to root executing id -u, with user and path fields redacted" loading="lazy">
+          <figcaption>DET-003 · sudo · <code>5402</code></figcaption>
+        </figure>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn--primary" href="https://github.com/choliwys/home-soc-wazuh-lab" rel="noopener">
+          <span lang="en">View the full repository</span><span lang="es">Ver el repositorio completo</span>
+        </a>
+      </div>
+      <p class="note">
+        <span lang="en">Includes runbooks (install, recovery, network startup), decision records, and a dependency-free Python script that turns sanitized detection data into a Markdown summary. The repository documentation is written in Spanish.</span>
+        <span lang="es">Incluye runbooks (instalación, recuperación, orden de arranque), registro de decisiones y un script en Python sin dependencias que convierte datos sanitizados de detecciones en un resumen Markdown.</span>
+      </p>
+
+      <h3 class="sub"><span lang="en">Currently building</span><span lang="es">En construcción</span></h3>
+      <ol class="roadmap">
+        <li class="card">
+          <span class="status status--next"><span lang="en">Next</span><span lang="es">Siguiente</span></span>
+          <h4><span lang="en">Phase 3 · SSH brute force, end to end</span><span lang="es">Fase 3 · Fuerza bruta SSH, de punta a punta</span></h4>
+          <p><span lang="en">Simulate repeated failed logins against my own endpoint, investigate it as a real incident (timeline, source, any successful login), write a custom Wazuh rule, and test Active Response to block the source. Documented before and after.</span><span lang="es">Simular intentos fallidos repetidos contra mi propio endpoint, investigarlo como un incidente real (línea de tiempo, origen, algún login exitoso), escribir una regla personalizada de Wazuh y probar Active Response para bloquear el origen. Documentado antes y después.</span></p>
+          <p class="tags"><span>Wazuh rules</span><span>Active Response</span><span>Incident report</span></p>
+        </li>
+        <li class="card">
+          <span class="status status--next"><span lang="en">Next</span><span lang="es">Siguiente</span></span>
+          <h4><span lang="en">Hardening and vulnerability triage, measured</span><span lang="es">Hardening y triage de vulnerabilidades, medido</span></h4>
+          <p><span lang="en">Baseline the endpoint with Lynis and Wazuh SCA (CIS benchmark), apply fixes, re-measure. Prioritize real CVEs from Wazuh vulnerability detection by CVSS and context.</span><span lang="es">Línea base del endpoint con Lynis y Wazuh SCA (benchmark CIS), aplicar correcciones y volver a medir. Priorizar CVEs reales de la detección de vulnerabilidades de Wazuh según CVSS y contexto.</span></p>
+          <p class="tags"><span>Lynis</span><span>CIS</span><span>Wazuh SCA</span><span>CVSS</span></p>
+        </li>
+        <li class="card">
+          <span class="status status--planned"><span lang="en">Planned</span><span lang="es">Planificado</span></span>
+          <h4><span lang="en">Windows and Active Directory identity lab</span><span lang="es">Lab de identidad con Windows y Active Directory</span></h4>
+          <p><span lang="en">Windows endpoint with Sysmon and the Wazuh agent, plus a small AD: alerts on logons, group membership changes and privileged accounts. Waiting on a host with enough resources.</span><span lang="es">Endpoint Windows con Sysmon y el agente de Wazuh, más un AD pequeño: alertas de inicios de sesión, cambios de grupos y cuentas privilegiadas. A la espera de un host con recursos suficientes.</span></p>
+          <p class="tags"><span>Sysmon</span><span>Active Directory</span><span>Windows</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="wrap section" id="experience">
+      <h2><span class="h-sym">02</span><span lang="en">Experience</span><span lang="es">Experiencia</span></h2>
+      <article class="card job">
+        <header>
+          <h3>International Potato Center (CIP)</h3>
+          <p class="meta">
+            <span lang="en">Helpdesk and Support Intern · Lima, Perú · Mar 2026 – Sep 2026</span>
+            <span lang="es">Practicante de Helpdesk y Soporte · Lima, Perú · mar 2026 – sep 2026</span>
+          </p>
+        </header>
+        <ul>
+          <li><span lang="en">Supported user accounts, permissions and access through <strong>Active Directory</strong> and <strong>Microsoft Entra ID</strong>.</span><span lang="es">Apoyé la administración de cuentas, permisos y accesos con <strong>Active Directory</strong> y <strong>Microsoft Entra ID</strong>.</span></li>
+          <li><span lang="en">L1/L2 support: Windows, connectivity, corporate applications, hardware and device configuration.</span><span lang="es">Soporte L1/L2: Windows, conectividad, aplicaciones corporativas, hardware y configuración de equipos.</span></li>
+          <li><span lang="en">Managed and documented incident tickets: diagnosis, actions taken, status and escalation.</span><span lang="es">Gestioné y documenté tickets de incidentes: diagnóstico, acciones, estado y escalamiento.</span></li>
+          <li><span lang="en">Prepared corporate devices following IT guidelines and kept the asset inventory up to date.</span><span lang="es">Preparé equipos corporativos según las guías de TI y mantuve actualizado el inventario de activos.</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="wrap section" id="projects">
+      <h2><span class="h-sym">03</span><span lang="en">More projects</span><span lang="es">Más proyectos</span></h2>
+      <div class="grid3">
+        <article class="card proj">
+          <h3>Helpdesk &amp; IT Asset Management</h3>
+          <p><span lang="en">Power Apps ticketing app, Power Automate notifications on new incidents and status changes, Power BI dashboard on SharePoint Lists (KPIs, categories, bottlenecks).</span><span lang="es">App de tickets en Power Apps, notificaciones con Power Automate y dashboard Power BI sobre SharePoint Lists (KPIs, categorías, cuellos de botella).</span></p>
+          <p class="tags"><span>Power Apps</span><span>Power Automate</span><span>Power BI</span></p>
+          <a href="https://github.com/choliwys/helpdesk-powerplatform" rel="noopener">GitHub →</a>
+        </article>
+        <article class="card proj">
+          <h3>IT Operations Data Insights</h3>
+          <p><span lang="en">Python ETL over 800 simulated support tickets: SLA, resolution time, escalations, reopenings and satisfaction, with SQL queries and visualizations.</span><span lang="es">ETL en Python sobre 800 tickets simulados: SLA, tiempos de resolución, escalamientos, reaperturas y satisfacción, con consultas SQL y visualizaciones.</span></p>
+          <p class="tags"><span>Python</span><span>SQL</span><span>Power BI</span></p>
+          <a href="https://github.com/choliwys/it-operations-data-insights" rel="noopener">GitHub →</a>
+        </article>
+        <article class="card proj">
+          <h3>Telecom Churn Analytics</h3>
+          <p><span lang="en">Cloud ETL pipeline: Python extraction, AWS S3 storage, Power BI churn KPIs.</span><span lang="es">Pipeline ETL en la nube: extracción con Python, almacenamiento en AWS S3 y KPIs de fuga en Power BI.</span></p>
+          <p class="tags"><span>AWS S3</span><span>Python</span><span>Power BI</span></p>
+          <a href="https://github.com/choliwys/telecom-churn-analytics" rel="noopener">GitHub →</a>
+        </article>
+        <article class="card proj">
+          <h3>DiligenceTech</h3>
+          <p><span lang="en">Due-diligence SPA connecting buyers and sellers, real-time data.</span><span lang="es">SPA de due diligence que conecta compradores y vendedores, con datos en tiempo real.</span></p>
+          <p class="tags"><span>Angular</span><span>Spring Boot</span><span>Firebase</span></p>
+          <a href="https://github.com/choliwys/DiligenceTech" rel="noopener">GitHub →</a>
+        </article>
+        <article class="card proj">
+          <h3>PawayApp</h3>
+          <p><span lang="en">Native Android app for MSME finances: invoices, budgets and reports.</span><span lang="es">App Android nativa para finanzas de MYPEs: facturas, presupuestos y reportes.</span></p>
+          <p class="tags"><span>Kotlin</span><span>Android</span><span>Spring Boot</span></p>
+          <a href="https://github.com/choliwys/PawayMobileApp" rel="noopener">GitHub →</a>
+        </article>
+        <article class="card proj">
+          <h3>Kingdom Defense</h3>
+          <p><span lang="en">Strategy game in vanilla JavaScript with Canvas API, ES6 modules and wave system.</span><span lang="es">Juego de estrategia en JavaScript puro con Canvas API, módulos ES6 y sistema de oleadas.</span></p>
+          <p class="tags"><span>JavaScript</span><span>Canvas</span></p>
+          <a href="https://kingdom-defense-ten.vercel.app/" rel="noopener">Demo →</a>
+          <a href="https://github.com/choliwys/KingdomDefense" rel="noopener">GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="wrap section" id="skills">
+      <h2><span class="h-sym">04</span><span lang="en">Skills &amp; credentials</span><span lang="es">Skills y credenciales</span></h2>
+      <dl class="skills">
+        <div><dt><span lang="en">Security operations</span><span lang="es">Operaciones de seguridad</span></dt><dd>Wazuh (SIEM) · log analysis · alert triage · incident documentation · File Integrity Monitoring · MITRE ATT&amp;CK</dd></div>
+        <div><dt><span lang="en">Security fundamentals</span><span lang="es">Fundamentos de seguridad</span></dt><dd>Hardening · access control &amp; least privilege · OWASP Top 10 · familiar with PCI DSS, ISO/IEC 27001, NIST CSF</dd></div>
+        <div><dt><span lang="en">Systems</span><span lang="es">Sistemas</span></dt><dd>Ubuntu Server · systemd · SSH · UFW · Windows · Active Directory · Microsoft Entra ID · Microsoft 365</dd></div>
+        <div><dt><span lang="en">Networking</span><span lang="es">Redes</span></dt><dd>TCP/IP · DNS · DHCP · HTTP/HTTPS · VPN · subnetting · VLAN · firewall fundamentals</dd></div>
+        <div><dt><span lang="en">Scripting &amp; data</span><span lang="es">Scripting y datos</span></dt><dd>Python · SQL · Git/GitHub · Power BI · Advanced Excel</dd></div>
+        <div><dt><span lang="en">AI tools</span><span lang="es">Herramientas de IA</span></dt><dd>Claude for research, scripting and documentation</dd></div>
+      </dl>
+      <h3 class="sub"><span lang="en">Certifications</span><span lang="es">Certificaciones</span></h3>
+      <ul class="chips">
+        <li>Google Cybersecurity Professional</li>
+        <li><a href="https://profile.hackthebox.com/profile/01a08487-c328-7143-919f-c6da25d6af4f" rel="noopener"><span lang="en">HTB Academy · SOC Analyst path (in progress)</span><span lang="es">HTB Academy · SOC Analyst path (en curso)</span></a></li>
+        <li>UC Davis · SQL for Data Science</li>
+        <li>Macquarie University · Excel Skills for Business: Advanced</li>
+        <li>SCRUMstudy · Scrum Fundamentals</li>
+      </ul>
+      <p class="note">
+        <span lang="en">Languages: Spanish (native), English (B2).</span>
+        <span lang="es">Idiomas: español (nativo), inglés (B2).</span>
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="wrap section" id="contact">
+      <h2><span class="h-sym">05</span><span lang="en">Contact</span><span lang="es">Contacto</span></h2>
+      <p class="lead">
+        <span lang="en">I'm looking for a security or infrastructure security internship. The best way to reach me is email or LinkedIn.</span>
+        <span lang="es">Busco una práctica en seguridad o seguridad de infraestructura. La mejor forma de contactarme es por correo o LinkedIn.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn--primary" href="mailto:cartureto@gmail.com">cartureto@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/aadrianzen/" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/choliwys" rel="noopener">GitHub</a>
+        <a class="btn" href="https://profile.hackthebox.com/profile/01a08487-c328-7143-919f-c6da25d6af4f" rel="noopener">Hack The Box</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Carlos Arturo Adrianzén Flores</span>
+      <span lang="en">Hand-built static site. No trackers, no cookies.</span>
+      <span lang="es">Sitio estático hecho a mano. Sin rastreadores ni cookies.</span>
     </div>
-</article>
+  </footer>
 
-        </div>
-    </div>
-</section>
+  <dialog class="lightbox" id="lightbox" aria-label="Image preview">
+    <img alt="">
+  </dialog>
 
-<section class="contact section" id="contacto">
-    <div class="contact__container container">
-        <h2 class="section__title">Hablemos</h2>
-        <p class="contact__description">
-            Estoy abierto a nuevas oportunidades y desafíos. 
-            Si tienes un proyecto en mente o crees que podría 
-            encajar en tu equipo, no dudes en contactarme.
-        </p>
-        
-        <div class="contact__links">
-            <a href="mailto:cartureto@gmail.com" class="contact__link btn btn--primary">
-                Envíame un Email
-            </a>
-            <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="contact__link btn btn--outline">
-                LinkedIn
-            </a>
-        </div>
-    </div>
-</section>
-    </main>
-    </main> <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__socials">
-                <a href="https://github.com/choliwys" target="_blank" rel="noopener noreferrer" class="footer__social-link">GitHub</a>
-                <a href="https://linkedin.com/in/aadrianzen" target="_blank" rel="noopener noreferrer" class="footer__social-link">LinkedIn</a>
-            </div>
-            <p class="footer__copy">&copy; 2025 Carlos Adrianzén. Todos los derechos reservados.</p>
-            <p class="footer__credits">Diseñado y construido desde cero por mí.</p>
-        </div>
-    </footer>
+  <script src="main.js"></script>
 </body>
 </html>
